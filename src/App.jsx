@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import './index.css'
-import Dashboard from "./dashboard/dashboard.jsx";
+import Page from "./app/dashboard/page.jsx";
 
 function App() {
   const [data, setData] = useState(null);
@@ -13,7 +13,7 @@ function App() {
   
   return (
     <>
-    <Dashboard/>
+    <Page/>
     <text>{data}</text>
     </>
   )
