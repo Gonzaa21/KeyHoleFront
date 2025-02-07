@@ -1,25 +1,21 @@
 import * as React from "react"
 import {
   BookOpen,
-  Bot,
-  Command,
-  Frame,
-  LifeBuoy,
-  Map,
-  PieChart,
-  Send,
-  Settings2,
-  SquareTerminal,
+  KeyRound,
+  Bug,
+  Pin,
+  CalendarDays,
+  CircleDollarSign,
+  PiggyBank,
+  Wallet,
+  Github,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
 import { NavSecondary } from "@/components/nav-secondary"
-import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -34,45 +30,6 @@ const data = {
   },
   navMain: [
     {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
       title: "Documentation",
       url: "#",
       icon: BookOpen,
@@ -84,70 +41,67 @@ const data = {
         {
           title: "Get Started",
           url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
+        }
       ],
     },
     {
-      title: "Settings",
+      title: "Objectives",
       url: "#",
-      icon: Settings2,
+      icon: Pin
+    },
+    {
+      title: "Calendar",
+      url: "#",
+      icon: CalendarDays
+    },
+    {
+      title: "Monthly Income",
+      url: "#",
+      icon: CircleDollarSign,
       items: [
         {
-          title: "General",
+          title: "Incomes summary",
           url: "#",
         },
         {
-          title: "Team",
+          title: "Source of incomes",
           url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
+        }
       ],
     },
+    {
+      title: "Monthly Expenses",
+      url: "#",
+      icon: Wallet,
+      items: [
+        {
+          title: "Expenses summary",
+          url: "#",
+        },
+        {
+          title: "Expense's alerts",
+          url: "#",
+        }
+      ],
+    },
+    {
+      title: "Investments",
+      url: "#",
+      icon: PiggyBank
+    }
   ],
   navSecondary: [
     {
-      title: "Support",
-      url: "#",
-      icon: LifeBuoy,
+      title: "GitHub",
+      url: "https://github.com/Gonzaa21/KeyHoleFront",
+      icon: Github,
     },
     {
-      title: "Feedback",
-      url: "#",
-      icon: Send,
+      title: "Open Issue",
+      url: "https://github.com/Gonzaa21/KeyHoleFront/issues",
+      icon: Bug,
     },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
-  ],
+  ]
 }
 
 export function AppSidebar({
@@ -164,11 +118,11 @@ export function AppSidebar({
               <a href="#">
                 <div
                   className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-4" />
+                  <KeyRound className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">Acme Inc</span>
-                  <span className="truncate text-xs">Enterprise</span>
+                  <span className="truncate font-semibold">KeyHole</span>
+                  <span className="truncate text-xs">Web application</span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -177,12 +131,8 @@ export function AppSidebar({
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
     </Sidebar>)
   );
 }
