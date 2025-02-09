@@ -6,3 +6,5 @@
     - Hacer las páginas con los componentes
 2. Hacer el backend
 3. Hacer base de datos
+
+- Comitear

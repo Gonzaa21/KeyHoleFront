@@ -10,7 +10,6 @@ import {
   Wallet,
   Github,
 } from "lucide-react"
-
 import { NavMain } from "@/components/nav-main"
 import { NavSecondary } from "@/components/nav-secondary"
 import {
@@ -23,15 +22,10 @@ import {
 } from "@/components/ui/sidebar"
 
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   navMain: [
     {
       title: "Documentation",
-      url: "#",
+      url: "/docs",
       icon: BookOpen,
       items: [
         {
@@ -46,17 +40,17 @@ const data = {
     },
     {
       title: "Objectives",
-      url: "#",
+      url: "/objectives",
       icon: Pin
     },
     {
       title: "Calendar",
-      url: "#",
+      url: "/calendar",
       icon: CalendarDays
     },
     {
       title: "Monthly Income",
-      url: "#",
+      url: "/income",
       icon: CircleDollarSign,
       items: [
         {
@@ -71,7 +65,7 @@ const data = {
     },
     {
       title: "Monthly Expenses",
-      url: "#",
+      url: "/spent",
       icon: Wallet,
       items: [
         {
@@ -86,7 +80,7 @@ const data = {
     },
     {
       title: "Investments",
-      url: "#",
+      url: "/investments",
       icon: PiggyBank
     }
   ],
@@ -104,9 +98,7 @@ const data = {
   ]
 }
 
-export function AppSidebar({
-  ...props
-}) {
+export function AppSidebar({ ...props }) {
   return (
     (<Sidebar
       className="top-[--header-height] !h-[calc(100svh-var(--header-height))]"
