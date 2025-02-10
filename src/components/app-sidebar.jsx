@@ -25,63 +25,33 @@ const data = {
   navMain: [
     {
       title: "Documentation",
-      url: "/docs",
+      url: "/dashboard/docs",
       icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        }
-      ],
     },
     {
       title: "Objectives",
-      url: "/objectives",
-      icon: Pin
+      url: "/dashboard/objectives",
+      icon: Pin,
     },
     {
       title: "Calendar",
-      url: "/calendar",
-      icon: CalendarDays
+      url: "/dashboard/calendar",
+      icon: CalendarDays,
     },
     {
       title: "Monthly Income",
-      url: "/income",
+      url: "/dashboard/income",
       icon: CircleDollarSign,
-      items: [
-        {
-          title: "Incomes summary",
-          url: "#",
-        },
-        {
-          title: "Source of incomes",
-          url: "#",
-        }
-      ],
     },
     {
       title: "Monthly Expenses",
-      url: "/spent",
+      url: "/dashboard/spent",
       icon: Wallet,
-      items: [
-        {
-          title: "Expenses summary",
-          url: "#",
-        },
-        {
-          title: "Expense's alerts",
-          url: "#",
-        }
-      ],
     },
     {
       title: "Investments",
-      url: "/investments",
-      icon: PiggyBank
+      url: "/dashboard/investments",
+      icon: PiggyBank,
     }
   ],
   navSecondary: [

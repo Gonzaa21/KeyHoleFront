@@ -1,12 +1,5 @@
 "use client"
 
-import { ChevronRight } from "lucide-react";
-
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -15,9 +8,11 @@ import {
   SidebarMenuItem
 } from "@/components/ui/sidebar"
 import { useBreadcrumb } from "@/components/breadcrumb-context";
+import { useNavigate } from "react-router-dom";
 
 export function NavMain({ items }) {
   const { setBreadcrumb } = useBreadcrumb();
+  const navigate = useNavigate();
 
   return (
     <SidebarGroup>
@@ -25,7 +20,7 @@ export function NavMain({ items }) {
       <SidebarMenu>
       {items.map((item) => (
         <SidebarMenuItem key={item.title}>
-          <SidebarMenuButton onClick={() => setBreadcrumb(item.title)}>
+          <SidebarMenuButton onClick={() => { setBreadcrumb(item.title); navigate(item.url); }}>
             <item.icon className="size-4 mr-2" />
             {item.title}
           </SidebarMenuButton>
