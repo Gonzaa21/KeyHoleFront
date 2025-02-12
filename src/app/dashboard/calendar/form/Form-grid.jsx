@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import DateInput from "./DateInput";
 
-export function TextAreaInput() {
+export function FormGrid() {
     return (
         <div className="grid gap-2">
             <div className="flex flex-col md:flex-row gap-2">
