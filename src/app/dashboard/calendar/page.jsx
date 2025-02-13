@@ -11,6 +11,14 @@ function CalendarPage() {
 
     return (
         <>
+        <div>
+            <h3 className="scroll-m-20 text-2xl font-bold tracking-tight">
+                📆 I Calendar
+            </h3>
+            <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-thin text-gray-600">
+              Program your activities in the calendar!
+            </code>
+        </div>
         <FormDate/>
             <Calendar
                 mode="single"
