@@ -5,8 +5,9 @@
     - ~~Editar toda la info y personalizar~~
     - Hacer las páginas con los componentes
         I. ~~Docs~~
-        II. ~~Calendario~~ (solucionar)
+        II. ~~Calendario~~ (soluciona)
         III. Objectivos (en proceso)
+            Solo falta el input
         VI. Ingresos
         V. Egresos
         IV. inversiones

@@ -9,7 +9,7 @@ export function FormGrid() {
                 <DateInput className="w-full md:w-auto h-[40px]" />
                 <Textarea className="flex-1 h-[40px] min-h-0 p-2 resize-none" placeholder="Type your message here." />
             </div>
-            <Button className="w-full">Save in calendar</Button>
+            <Button type="submit" className="w-full">Save in calendar</Button>
         </div>
     )
 }
