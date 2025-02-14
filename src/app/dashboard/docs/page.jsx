@@ -12,7 +12,7 @@ function Documentation() {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Documentation</CardTitle>
+                <CardTitle className="scroll-m-20 text-2xl font-bold tracking-tight lg:text-3xl">Documentation</CardTitle>
                 <CardDescription>How to use and information</CardDescription>
                 <Separator/>
             </CardHeader>
@@ -23,8 +23,8 @@ function Documentation() {
                 <h1 className="font-semibold text-xl leading-none tracking-tight pb-3 md:pb-0 md:pr-3">Getting started</h1>
                 <p>To start using this web, browse between categories and complete with appropiate information and that's it! When you return to this website the data will have been saved locally.</p>
             </CardFooter>
-            <CardHeader>
-                <CardTitle>Principal Content</CardTitle>
+            <CardHeader className="px-6 pt-6 pb-0">
+                <CardTitle className="scroll-m-20 pb-2 text-xl font-semibold tracking-tight first:mt-0">Principal Content</CardTitle>
                 <Separator/>
             </CardHeader>
             <CardContent>
