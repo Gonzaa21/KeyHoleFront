@@ -6,12 +6,11 @@
     - Hacer las páginas con los componentes
         I. ~~Docs~~
         II. ~~Calendario~~
-        III. Objectivos
-        + + + + Solo falta el input
+        III. ~~Objectivos~~
         VI. Ingresos (proceso)
             ~~graficos~~
             ~~form~~
-        + + + + Solo falta editar los graficos
+        + + + + Solo falta editar las fechas y total income y percent
         V. Egresos
             graficos
             form
