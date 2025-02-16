@@ -17,18 +17,18 @@ import {
 } from "@/components/ui/chart"
 
 const chartData = [
-  { date: "2024-04-01", desktop: 200 },
-  { date: "2024-04-02", desktop: 97 },
-  { date: "2024-04-03", desktop: 167 },
-  { date: "2024-04-04", desktop: 242 },
-  { date: "2024-04-05", desktop: 373 },
-  { date: "2024-04-06", desktop: 301 },
-  { date: "2024-04-07", desktop: 245 },
-  { date: "2024-04-08", desktop: 409 },
-  { date: "2024-04-09", desktop: 59 },
-  { date: "2024-04-10", desktop: 261 },
-  { date: "2024-04-11", desktop: 327 },
-  { date: "2024-04-12", desktop: 292 },
+  { date: "2024-01", desktop: 26 },
+  { date: "2024-02", desktop: 100 },
+  { date: "2024-03", desktop: 26 },
+  { date: "2024-04", desktop: 97 },
+  { date: "2024-05", desktop: 56 },
+  { date: "2024-06", desktop: 82 },
+  { date: "2024-07", desktop: 10 },
+  { date: "2024-08", desktop: 55 },
+  { date: "2024-09", desktop: 32 },
+  { date: "2024-10", desktop: 66 },
+  { date: "2024-11", desktop: 89 },
+  { date: "2024-12", desktop: 100 },
 ]
 
 const chartConfig = {
@@ -48,6 +48,16 @@ export function ChartHorizontal() {
     desktop: chartData.reduce((acc, curr) => acc + curr.desktop, 0),
     mobile: chartData.reduce((acc, curr) => acc + curr.mobile, 0),
   }), []);
+
+  const monthTicks = chartData
+  .map((entry) => ({
+    date: entry.date,
+    month: new Date(entry.date).getMonth(),
+  }))
+  .filter((entry, index, self) => 
+    index === self.findIndex((e) => e.month === entry.month)
+  )
+  .map((entry) => entry.date);
 
   return (
     <Card>
@@ -92,12 +102,11 @@ export function ChartHorizontal() {
               tickMargin={8}
               tickFormatter={(value) => {
                 const date = new Date(value);
-                return date.toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                });
+                return date.toLocaleDateString("en-US", { month: "short" });
               }}
+              ticks={monthTicks}
             />
+
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent indicator="line" />}
