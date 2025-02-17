@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { TrendingUp } from "lucide-react"
 import { Label, Pie, PieChart } from "recharts"
 
 import {
@@ -18,31 +17,31 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 287, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 190, fill: "var(--color-other)" },
+  { category: "Services", expenses: 150100, fill: "var(--color-services)" },
+  { category: "Food", expenses: 200800, fill: "var(--color-food)" },
+  { category: "Ent.", expenses: 320200, fill: "var(--color-entertainment)" },
+  { category: "Dress", expenses: 400400, fill: "var(--color-dress)" },
+  { category: "other", expenses: 590000, fill: "var(--color-other)" },
 ]
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
+  expenses: {
+    label: "Expenses",
   },
-  chrome: {
-    label: "Chrome",
+  services: {
+    label: "Services",
     color: "hsl(var(--chart-1))",
   },
-  safari: {
-    label: "Safari",
+  food: {
+    label: "Food",
     color: "hsl(var(--chart-2))",
   },
-  firefox: {
-    label: "Firefox",
+  entertainment: {
+    label: "Entertainment",
     color: "hsl(var(--chart-3))",
   },
-  edge: {
-    label: "Edge",
+  dress: {
+    label: "Dress",
     color: "hsl(var(--chart-4))",
   },
   other: {
@@ -52,8 +51,8 @@ const chartConfig = {
 }
 
 export function DonutSpent() {
-  const totalVisitors = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.visitors, 0)
+  const totalExpenses = React.useMemo(() => {
+    return chartData.reduce((acc, curr) => acc + curr.expenses, 0)
   }, [])
 
   return (
@@ -74,8 +73,8 @@ export function DonutSpent() {
             />
             <Pie
               data={chartData}
-              dataKey="visitors"
-              nameKey="browser"
+              dataKey="expenses"
+              nameKey="category"
               innerRadius={60}
               strokeWidth={5}
             >
@@ -92,16 +91,16 @@ export function DonutSpent() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="fill-foreground text-3xl font-bold"
+                          className="fill-foreground text-xl font-bold"
                         >
-                          {totalVisitors.toLocaleString()}
+                          $ {totalExpenses.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Visitors
+                          Expenses
                         </tspan>
                       </text>
                     )
@@ -114,7 +113,7 @@ export function DonutSpent() {
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex items-center gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          Showing total expenses for this month
         </div>
       </CardFooter>
     </Card>

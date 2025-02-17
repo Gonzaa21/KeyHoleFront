@@ -17,17 +17,17 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
+  { month: "January", expenses: 18236 },
+  { month: "February", expenses: 31105 },
+  { month: "March", expenses: 27237 },
+  { month: "April", expenses: 5713 },
+  { month: "May", expenses: 20987 },
+  { month: "June", expenses: 21424 },
 ]
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  expenses: {
+    label: "Exp.",
     color: "hsl(var(--chart-1))",
   },
 }
@@ -54,7 +54,7 @@ export function BarSpent() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8} />
+            <Bar dataKey="expenses" fill="var(--color-expenses)" radius={8} />
           </BarChart>
         </ChartContainer>
       </CardContent>
