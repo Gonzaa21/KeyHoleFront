@@ -15,17 +15,17 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { month: "July", desktop: 186 },
-  { month: "August", desktop: 305 },
-  { month: "September", desktop: 237 },
-  { month: "October", desktop: 273 },
-  { month: "November", desktop: 209 },
-  { month: "December", desktop: 214 },
+  { month: "July", income: 186 },
+  { month: "August", income: 305 },
+  { month: "September", income: 237 },
+  { month: "October", income: 273 },
+  { month: "November", income: 209 },
+  { month: "December", income: 214 },
 ]
 
 const chartConfig = {
-    desktop: {
-      label: "Desktop",
+    income: {
+      label: "Tot. Inc.",
       color: "hsl(var(--chart-1))",
     },
 };
@@ -49,8 +49,8 @@ export function RadarCharts() {
             <PolarAngleAxis dataKey="month" />
             <PolarGrid />
             <Radar
-              dataKey="desktop"
-              fill="var(--color-desktop)"
+              dataKey="income"
+              fill="var(--color-income)"
               fillOpacity={0.6}
             />
           </RadarChart>

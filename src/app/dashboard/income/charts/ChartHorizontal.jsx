@@ -17,27 +17,27 @@ import {
 } from "@/components/ui/chart"
 
 const chartData = [
-  { date: "2024-01", desktop: 26 },
-  { date: "2024-02", desktop: 100 },
-  { date: "2024-03", desktop: 26 },
-  { date: "2024-04", desktop: 97 },
-  { date: "2024-05", desktop: 56 },
-  { date: "2024-06", desktop: 82 },
-  { date: "2024-07", desktop: 10 },
-  { date: "2024-08", desktop: 55 },
-  { date: "2024-09", desktop: 32 },
-  { date: "2024-10", desktop: 66 },
-  { date: "2024-11", desktop: 89 },
-  { date: "2024-12", desktop: 100 },
+  { date: "2024-01", income: 26 },
+  { date: "2024-02", income: 100 },
+  { date: "2024-03", income: 26 },
+  { date: "2024-04", income: 97 },
+  { date: "2024-05", income: 56 },
+  { date: "2024-06", income: 82 },
+  { date: "2024-07", income: 10 },
+  { date: "2024-08", income: 55 },
+  { date: "2024-09", income: 32 },
+  { date: "2024-10", income: 66 },
+  { date: "2024-11", income: 89 },
+  { date: "2024-12", income: 100 },
 ]
 
 const chartConfig = {
-  desktop: {
-    label: "Total Income",
+  income: {
+    label: "Tot. Inc.",
     color: "hsl(var(--chart-1))",
   },
-  mobile: {
-    label: "Profit Percent",
+  profit: {
+    label: "Profit %",
     color: "hsl(var(--chart-2))",
   }
 }
@@ -45,8 +45,8 @@ const chartConfig = {
 export function ChartHorizontal() {
 
   const total = useMemo(() => ({
-    desktop: chartData.reduce((acc, curr) => acc + curr.desktop, 0),
-    mobile: chartData.reduce((acc, curr) => acc + curr.mobile, 0),
+    income: chartData.reduce((acc, curr) => acc + curr.income, 0),
+    profit: chartData.reduce((acc, curr) => acc + curr.profit, 0),
   }), []);
 
   const monthTicks = chartData
@@ -67,7 +67,7 @@ export function ChartHorizontal() {
         <CardDescription>Income chart by month</CardDescription>
       </div>
       <div className="flex">
-        {["desktop", "mobile"].map(function(key) {
+        {["income", "profit"].map(function(key) {
           const chart = key;
           return (
             <button
@@ -112,11 +112,11 @@ export function ChartHorizontal() {
               content={<ChartTooltipContent indicator="line" />}
             />
             <Area
-              dataKey="desktop"
+              dataKey="income"
               type="monotone"
-              fill="var(--color-desktop)"
+              fill="var(--color-income)"
               fillOpacity={0.4}
-              stroke="var(--color-desktop)"
+              stroke="var(--color-income)"
             />
           </AreaChart>
           

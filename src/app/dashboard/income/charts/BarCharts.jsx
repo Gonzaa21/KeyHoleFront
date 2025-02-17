@@ -18,17 +18,17 @@ import {
 } from "@/components/ui/chart"
 
 const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
+  { month: "January", income: 186 },
+  { month: "February", income: 305 },
+  { month: "March", income: 237 },
+  { month: "April", income: 73 },
+  { month: "May", income: 209 },
+  { month: "June", income: 214 },
 ]
 
 const chartConfig = {
-    desktop: {
-      label: "Desktop",
+    income: {
+      label: "Tot. Inc.",
       color: "hsl(var(--chart-1))",
     },
 };
@@ -50,7 +50,7 @@ export function BarCharts() {
               left: -20,
             }}
           >
-            <XAxis type="number" dataKey="desktop" hide />
+            <XAxis type="number" dataKey="income" hide />
             <YAxis
               dataKey="month"
               type="category"
@@ -63,7 +63,7 @@ export function BarCharts() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={5} />
+            <Bar dataKey="income" fill="var(--color-income)" radius={5} />
           </BarChart>
         </ChartContainer>
       </CardContent>
