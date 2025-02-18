@@ -8,79 +8,79 @@ function getData() {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     {
       id: "728ed52f",
       priority: 100,
       status: "pending",
-      title_description: "m@example.com"
+      objective: "m@example.com"
     },
     
   ]
@@ -95,6 +95,3 @@ export default function Objectives() {
     </div>
   )
 }
-
-// Terminar de hacer la tabla
-// Solucionar el error del calendario

@@ -7,13 +7,8 @@
         I. ~~Docs~~
         II. ~~Calendario~~
         III. ~~Objectivos~~
-        VI. Ingresos (proceso)
-            ~~graficos~~
-            ~~form~~
-        + + + + Solo falta editar las fechas y total income y percent
-        V. Egresos
-            graficos
-            form
+        VI. ~~Ingresos~~
+        V. ~~Egresos~~
         IV. inversiones
 2. Hacer el backend
 3. Hacer base de datos

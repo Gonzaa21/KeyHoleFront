@@ -39,8 +39,8 @@ export const columns = [
     size: 200
   },
   {
-    accessorKey: "title_description",
-    header: "Title and Description",
+    accessorKey: "objective",
+    header: "Objective",
     size: 500
   },
   {

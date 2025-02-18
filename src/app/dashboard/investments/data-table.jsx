@@ -19,7 +19,7 @@ import {
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import TableForm from './form/TableForm'
+import TableForm from "./form/TableForm"
 
 export function DataTable({ columns, data }) {
   const [columnFilters, setColumnFilters] = React.useState([])
@@ -47,20 +47,20 @@ export function DataTable({ columns, data }) {
     <>
     <div className="">
       <h3 className="scroll-m-20 text-2xl font-bold tracking-tight">
-        🎯 I Objectives
+        🏦 I Investments
       </h3>
       <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-thin text-gray-600">
-        Here's a list of your goals for this month, hands to work!
+        Here's a list of your actives Investments for this month.
       </code>
     </div>
     
     <div>
       <div className="flex items-center py-4">
         <Input
-          placeholder="Filter title and description"
-          value={table.getColumn("objective")?.getFilterValue() ?? ""}
+          placeholder="Filter name"
+          value={table.getColumn("name")?.getFilterValue() ?? ""}
           onChange={(event) =>
-            table.getColumn("objective")?.setFilterValue(event.target.value)
+            table.getColumn("name")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
@@ -89,7 +89,7 @@ export function DataTable({ columns, data }) {
               table.getRowModel().rows.map(row => (
                 <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
                   {row.getVisibleCells().map(cell => (
-                    <TableCell key={cell.id}>
+                    <TableCell key={cell.id} >
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
                   ))}
@@ -106,7 +106,7 @@ export function DataTable({ columns, data }) {
         </Table>
       </div>
       
-      <div className="flex items-center flex-row-reverse space-x-2 py-4">
+      <div className="flex items-center justify-between flex-row-reverse space-x-2 py-4">
         <Button
           variant="outline"
           size="sm"
@@ -123,11 +123,6 @@ export function DataTable({ columns, data }) {
         >
           Next
         </Button>
-
-        <div className="flex-1 text-sm text-muted-foreground">
-          {table.getFilteredSelectedRowModel().rows.length} of{" "}
-          {table.getFilteredRowModel().rows.length} row(s) selected.
-        </div>
       </div>
     </div>
 
