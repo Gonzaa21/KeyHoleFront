@@ -3,13 +3,7 @@
     - ~~Hacer el icono~~
     - ~~Plantilla dashboard~~
     - ~~Editar toda la info y personalizar~~
-    - Hacer las páginas con los componentes
-        I. ~~Docs~~
-        II. ~~Calendario~~
-        III. ~~Objectivos~~
-        VI. ~~Ingresos~~
-        V. ~~Egresos~~
-        IV. inversiones
+    - ~~Hacer las páginas con los componentes~~
 2. Hacer el backend
 3. Hacer base de datos
 
