@@ -1,27 +1,35 @@
-import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
-import { DollarSign } from 'lucide-react';
+import { useState } from "react";
+import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
+import { DollarSign } from "lucide-react";
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-} from "@/components/ui/input-otp"
+export function MoneyInput({ setValue }) {
+  const [inputValue, setInputValue] = useState("");
 
-export function MoneyInput() {
+  const handleChange = (val) => {
+    setInputValue(val);
+    setValue("amount", val); // Actualiza el formulario con el valor ingresado
+  };
+
   return (
-    <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS_AND_CHARS}>
-        <DollarSign size="16px"/>
+    <InputOTP
+      maxLength={6}
+      pattern={REGEXP_ONLY_DIGITS_AND_CHARS}
+      value={inputValue}
+      onChange={handleChange} // Manejamos el cambio manualmente
+    >
+      <DollarSign size="16px" />
       <InputOTPGroup>
         <InputOTPSlot index={0} />
         <InputOTPSlot index={1} />
         <InputOTPSlot index={2} />
       </InputOTPGroup>
-        <p className="font-bold">.</p>
+      <p className="font-bold">.</p>
       <InputOTPGroup>
-          <InputOTPSlot index={3} />
-          <InputOTPSlot index={4} />
-          <InputOTPSlot index={5} />
+        <InputOTPSlot index={3} />
+        <InputOTPSlot index={4} />
+        <InputOTPSlot index={5} />
       </InputOTPGroup>
     </InputOTP>
-  )
+  );
 }

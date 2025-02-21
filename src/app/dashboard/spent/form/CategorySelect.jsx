@@ -10,9 +10,9 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
-export function CategorySelect() {
+export function CategorySelect({ value, onChange }) {
   return (
-    <Select>
+    <Select value={value} onValueChange={onChange}>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Select a category" />
       </SelectTrigger>

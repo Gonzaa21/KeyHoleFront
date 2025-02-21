@@ -1,3 +1,5 @@
+import { useForm, Controller } from "react-hook-form";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { BarCharts } from "./charts/BarCharts";
 import { ChartHorizontal } from "./charts/ChartHorizontal";
@@ -7,7 +9,25 @@ import { MonthSelect } from "./form/MonthSelect";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 function Income() {
+    const { control, handleSubmit, setValue } = useForm();
+    const [jsonData, setJsonData] = useState(null);
+
+    const onSubmit = (data) => {
+        const jsonData = JSON.stringify(data);
+        setJsonData(jsonData);
+        console.log("Datos en JSON:", jsonData);
+
+        fetch("http://localhost:5000/dashboard/income", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: jsonData,
+        })
+        .then(response => response.json())
+        .then(result => console.log("Respuesta del backend:", result))
+        .catch(error => console.error("Error:", error));
+    };
     return (
+    
         <>
             <div>
                 <h3 className="scroll-m-20 text-2xl font-bold tracking-tight">
@@ -18,6 +38,7 @@ function Income() {
                 </code>
             </div>
             <ChartHorizontal />
+            <form onSubmit={handleSubmit(onSubmit)}>
             <div className="md:grid md:grid-cols-3 inline gap-4 flex-wrap">
                 <BarCharts />
                 <RadarCharts />
@@ -27,12 +48,20 @@ function Income() {
                         <CardTitle>Enter your earnings and select the month</CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col gap-4">
-                        <MoneyInput />
-                        <MonthSelect />
+                        <MoneyInput setValue={setValue} />
+                        <Controller name="month" control={control} render={({ field }) => <MonthSelect {...field} />} />
                         <Button type="submit">Save</Button>
                     </CardContent>
                 </Card>
             </div>
+
+            {jsonData && (
+                <div className="mt-4 p-2 border rounded bg-gray-100">
+                    <h3 className="font-semibold">Datos en JSON:</h3>
+                    <pre className="text-sm">{jsonData}</pre>
+                </div>
+            )}
+        </form>
         </>
     )
 }

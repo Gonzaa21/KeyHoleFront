@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 
 import {
   Select,
@@ -8,28 +8,28 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
-export function TableSelect() {
+export function TableSelect({ value, onChange }) {
   return (
-    <Select >
+    <Select value={value} onValueChange={onChange}>
       <SelectTrigger className="max-w-28 text-gray-600">
         <SelectValue placeholder="Priority" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Priority</SelectLabel>
-          <SelectItem value="one">1</SelectItem>
-          <SelectItem value="two">2</SelectItem>
-          <SelectItem value="three">3</SelectItem>
-          <SelectItem value="four">4</SelectItem>
-          <SelectItem value="five">5</SelectItem>
-          <SelectItem value="six">6</SelectItem>
-          <SelectItem value="seven">7</SelectItem>
-          <SelectItem value="eight">8</SelectItem>
-          <SelectItem value="nine">9</SelectItem>
+          <SelectItem value="1">1</SelectItem>
+          <SelectItem value="2">2</SelectItem>
+          <SelectItem value="3">3</SelectItem>
+          <SelectItem value="4">4</SelectItem>
+          <SelectItem value="5">5</SelectItem>
+          <SelectItem value="6">6</SelectItem>
+          <SelectItem value="7">7</SelectItem>
+          <SelectItem value="8">8</SelectItem>
+          <SelectItem value="9">9</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
-  )
+  );
 }

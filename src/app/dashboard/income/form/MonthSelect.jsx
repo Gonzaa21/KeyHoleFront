@@ -1,5 +1,4 @@
-import * as React from "react"
-
+import * as React from "react";
 import {
   Select,
   SelectContent,
@@ -8,11 +7,11 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
-export function MonthSelect() {
+export function MonthSelect({ value, onChange }) {
   return (
-    <Select>
+    <Select value={value} onValueChange={onChange}>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Select a month" />
       </SelectTrigger>
@@ -34,5 +33,5 @@ export function MonthSelect() {
         </SelectGroup>
       </SelectContent>
     </Select>
-  )
+  );
 }
