@@ -17,11 +17,11 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { category: "Services", expenses: 150100, fill: "var(--color-services)" },
-  { category: "Food", expenses: 200800, fill: "var(--color-food)" },
-  { category: "Ent.", expenses: 320200, fill: "var(--color-entertainment)" },
-  { category: "Dress", expenses: 400400, fill: "var(--color-dress)" },
-  { category: "other", expenses: 590000, fill: "var(--color-other)" },
+  { category: "Services", expenses: 1075, fill: "var(--color-services)" },
+  { category: "Food", expenses: 275, fill: "var(--color-food)" },
+  { category: "Ent.", expenses: 1445, fill: "var(--color-entertainment)" },
+  { category: "Dress", expenses: 905, fill: "var(--color-dress)" },
+  { category: "other", expenses: 675, fill: "var(--color-other)" },
 ]
 
 const chartConfig = {

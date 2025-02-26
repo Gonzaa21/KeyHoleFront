@@ -15,12 +15,12 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { month: "July", income: 186 },
-  { month: "August", income: 305 },
-  { month: "September", income: 237 },
-  { month: "October", income: 273 },
-  { month: "November", income: 209 },
-  { month: "December", income: 214 },
+  { month: "July", income: 9250 },
+  { month: "August", income: 10000 },
+  { month: "September", income: 10100 },
+  { month: "October", income: 10500 },
+  { month: "November", income: 11000 },
+  { month: "December", income: 9000 },
 ]
 
 const chartConfig = {

@@ -2,85 +2,84 @@ import { columns } from "./columns"
 import { DataTable } from "./data-table"
 
 function getData() {
-  // Fetch data from your API here.
   return [
     {
       id: "728ed52f",
-      priority: 100,
+      priority: 95,
       status: "pending",
-      objective: "m@example.com"
+      objective: "Build an Emergency Fund"
     },
     {
       id: "728ed52f",
-      priority: 100,
-      status: "pending",
-      objective: "m@example.com"
+      priority: 90,
+      status: "Completed",
+      objective: "Create a Monthly Budget"
     },
     {
       id: "728ed52f",
-      priority: 100,
+      priority: 85,
       status: "pending",
-      objective: "m@example.com"
+      objective: "Increase Income Sources"
     },
     {
       id: "728ed52f",
-      priority: 100,
-      status: "pending",
-      objective: "m@example.com"
+      priority: 80,
+      status: "Completed",
+      objective: "Save for Retirement"
     },
     {
       id: "728ed52f",
-      priority: 100,
+      priority: 78,
       status: "pending",
-      objective: "m@example.com"
+      objective: "Pay Off Debt"
     },
     {
       id: "728ed52f",
-      priority: 100,
-      status: "pending",
-      objective: "m@example.com"
+      priority: 75,
+      status: "Completed",
+      objective: "Invest in Stocks or Real Estate"
     },
     {
       id: "728ed52f",
-      priority: 100,
+      priority: 72,
       status: "pending",
-      objective: "m@example.com"
+      objective: "Improve Credit Score"
     },
     {
       id: "728ed52f",
-      priority: 100,
+      priority: 70,
       status: "pending",
-      objective: "m@example.com"
+      objective: "Reduce Unnecessary Expenses"
     },
     {
       id: "728ed52f",
-      priority: 100,
+      priority: 68,
       status: "pending",
-      objective: "m@example.com"
+      objective: "Buy a Home"
     },
     {
       id: "728ed52f",
-      priority: 100,
-      status: "pending",
-      objective: "m@example.com"
+      priority: 65,
+      status: "Completed",
+      objective: "Start a Business"
     },
     {
       id: "728ed52f",
-      priority: 100,
+      priority: 50,
       status: "pending",
-      objective: "m@example.com"
+      objective: "Plan for Children's Education"
     },
     {
       id: "728ed52f",
-      priority: 100,
+      priority: 45,
       status: "pending",
-      objective: "m@example.com"
+      objective: "Achieve Financial Independence"
     },
     {
       id: "728ed52f",
-      priority: 100,
-      status: "pending",
-      objective: "m@example.com"
+      priority: 30,
+      status: "Completed",
+      objective: "Set a Philanthropy Goal"
     },
     
   ]

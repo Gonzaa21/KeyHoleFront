@@ -18,12 +18,12 @@ import {
 } from "@/components/ui/chart"
 
 const chartData = [
-  { month: "January", income: 186 },
-  { month: "February", income: 305 },
-  { month: "March", income: 237 },
-  { month: "April", income: 73 },
-  { month: "May", income: 209 },
-  { month: "June", income: 214 },
+  { month: "January", income: 5500 },
+  { month: "February", income: 6000 },
+  { month: "March", income: 7000 },
+  { month: "April", income: 7500 },
+  { month: "May", income: 8500 },
+  { month: "June", income: 8750 },
 ]
 
 const chartConfig = {

@@ -13,18 +13,20 @@ function Spent() {
     const [jsonData, setJsonData] = useState(null);
   
     const onSubmit = (data) => {
-      const jsonData = JSON.stringify(data);
-      setJsonData(jsonData);
-      console.log("Datos en JSON:", jsonData);
-  
-        fetch("http://127.0.0.1:5000/dashboard/spent", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: jsonData,
-        })
-        .then(response => response.json())
-        .then(result => console.log("Respuesta del backend:", result))
-        .catch(error => console.error("Error:", error));
+        data.trans_type = "income";
+        
+        const jsonData = JSON.stringify(data);
+        setJsonData(jsonData);
+        console.log("Datos en JSON:", jsonData);
+        
+          fetch("http://127.0.0.1:5000/dashboard/spent", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: jsonData,
+          })
+          .then(response => response.json())
+          .then(result => console.log("Respuesta del backend:", result))
+          .catch(error => console.error("Error:", error));
     };
 
     return (

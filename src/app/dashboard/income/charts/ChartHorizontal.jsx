@@ -17,18 +17,18 @@ import {
 } from "@/components/ui/chart"
 
 const chartData = [
-  { date: "2024-01", income: 26 },
-  { date: "2024-02", income: 100 },
-  { date: "2024-03", income: 26 },
-  { date: "2024-04", income: 97 },
-  { date: "2024-05", income: 56 },
-  { date: "2024-06", income: 82 },
-  { date: "2024-07", income: 10 },
-  { date: "2024-08", income: 55 },
-  { date: "2024-09", income: 32 },
-  { date: "2024-10", income: 66 },
-  { date: "2024-11", income: 89 },
-  { date: "2024-12", income: 100 },
+  { date: "2024-01", income: 5000 },
+  { date: "2024-02", income: 5500 },
+  { date: "2024-03", income: 6000 },
+  { date: "2024-04", income: 7000 },
+  { date: "2024-05", income: 7500 },
+  { date: "2024-06", income: 8500 },
+  { date: "2024-07", income: 8750 },
+  { date: "2024-08", income: 9250 },
+  { date: "2024-09", income: 10000 },
+  { date: "2024-10", income: 10100 },
+  { date: "2024-11", income: 10500 },
+  { date: "2024-12", income: 11000 },
 ]
 
 const chartConfig = {

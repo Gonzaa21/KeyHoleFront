@@ -13,6 +13,8 @@ function Income() {
     const [jsonData, setJsonData] = useState(null);
 
     const onSubmit = (data) => {
+        data.trans_type = "income";
+        
         const jsonData = JSON.stringify(data);
         setJsonData(jsonData);
         console.log("Datos en JSON:", jsonData);
@@ -49,7 +51,7 @@ function Income() {
                     </CardHeader>
                     <CardContent className="flex flex-col gap-4">
                         <MoneyInput setValue={setValue} />
-                        <Controller name="month" control={control} render={({ field }) => <MonthSelect {...field} />} />
+                        <Controller name="months" control={control} render={({ field }) => <MonthSelect {...field} />} />
                         <Button type="submit">Save</Button>
                     </CardContent>
                 </Card>
