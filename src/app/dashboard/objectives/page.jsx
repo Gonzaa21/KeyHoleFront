@@ -3,6 +3,7 @@ import { DataTable } from "./data-table"
 
 function getData() {
   return [
+    // Data example
     {
       id: "728ed52f",
       priority: 95,

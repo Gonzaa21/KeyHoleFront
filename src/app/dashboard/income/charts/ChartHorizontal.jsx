@@ -16,6 +16,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 
+// Data
 const chartData = [
   { date: "2024-01", income: 5000 },
   { date: "2024-02", income: 5500 },
@@ -31,6 +32,7 @@ const chartData = [
   { date: "2024-12", income: 11000 },
 ]
 
+// Config
 const chartConfig = {
   income: {
     label: "Tot. Inc.",
@@ -44,11 +46,13 @@ const chartConfig = {
 
 export function ChartHorizontal() {
 
+  // Total income/profit
   const total = useMemo(() => ({
     income: chartData.reduce((acc, curr) => acc + curr.income, 0),
     profit: chartData.reduce((acc, curr) => acc + curr.profit, 0),
   }), []);
 
+  // Months dates
   const monthTicks = chartData
   .map((entry) => ({
     date: entry.date,

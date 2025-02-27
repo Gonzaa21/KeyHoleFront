@@ -8,7 +8,7 @@ export function MoneyInput({ setValue }) {
 
   const handleChange = (val) => {
     setInputValue(val);
-    setValue("amount", val); // Actualiza el formulario con el valor ingresado
+    setValue("amount", val); // Update form
   };
 
   return (
@@ -16,7 +16,7 @@ export function MoneyInput({ setValue }) {
       maxLength={6}
       pattern={REGEXP_ONLY_DIGITS_AND_CHARS}
       value={inputValue}
-      onChange={handleChange} // Manejamos el cambio manualmente
+      onChange={handleChange}
     >
       <DollarSign size="16px" />
       <InputOTPGroup>

@@ -31,6 +31,7 @@ function Spent() {
 
     return (
         <>
+            {/* Title and description */}
             <div className="mb-4">
                 <h3 className="scroll-m-20 text-2xl font-bold tracking-tight">
                     💸 I Expenses
@@ -40,6 +41,7 @@ function Spent() {
                 </code>
             </div>
 
+            {/* Charts */}
             <Card>
                 <CardHeader>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -49,6 +51,7 @@ function Spent() {
                 </CardHeader>
             </Card>
 
+            {/* Formulary */}
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Card className="w-full mt-4">
                     <CardHeader>

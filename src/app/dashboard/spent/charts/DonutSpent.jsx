@@ -16,6 +16,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+
+// Data
 const chartData = [
   { category: "Services", expenses: 1075, fill: "var(--color-services)" },
   { category: "Food", expenses: 275, fill: "var(--color-food)" },
@@ -24,6 +26,7 @@ const chartData = [
   { category: "other", expenses: 675, fill: "var(--color-other)" },
 ]
 
+// Config
 const chartConfig = {
   expenses: {
     label: "Expenses",
@@ -51,6 +54,7 @@ const chartConfig = {
 }
 
 export function DonutSpent() {
+  // Total expenses
   const totalExpenses = React.useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.expenses, 0)
   }, [])

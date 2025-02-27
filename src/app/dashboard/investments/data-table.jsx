@@ -26,17 +26,22 @@ export function DataTable({ columns, data }) {
   const [rowSelection, setRowSelection] = React.useState({})
   const [columnSizing, setColumnSizing] = React.useState({})
 
+  // logic and funcionalities
   const table = useReactTable({
+    // Table
     data,
     columns,
-    getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
+    getCoreRowModel: getCoreRowModel(), // Obtain data
+    getPaginationRowModel: getPaginationRowModel(), // Pagination
+    // Filter
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
-    onRowSelectionChange: setRowSelection,
+    onRowSelectionChange: setRowSelection, // Selection
+    // Column size
     columnSizing,
     onColumnSizingChange: setColumnSizing,
     columnResizeMode: "onChange",
+
     state: {
       columnFilters,
       rowSelection
@@ -45,7 +50,8 @@ export function DataTable({ columns, data }) {
 
   return (
     <>
-    <div className="">
+    {/* Title and description */}
+    <div>
       <h3 className="scroll-m-20 text-2xl font-bold tracking-tight">
         🏦 I Investments
       </h3>
@@ -54,6 +60,7 @@ export function DataTable({ columns, data }) {
       </code>
     </div>
     
+    {/* Filter input */}
     <div>
       <div className="flex items-center py-4">
         <Input
@@ -66,6 +73,7 @@ export function DataTable({ columns, data }) {
         />
       </div>
       
+      {/* Table content */}
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -106,6 +114,7 @@ export function DataTable({ columns, data }) {
         </Table>
       </div>
       
+      {/* Select page */}
       <div className="flex items-center justify-between flex-row-reverse space-x-2 py-4">
         <Button
           variant="outline"

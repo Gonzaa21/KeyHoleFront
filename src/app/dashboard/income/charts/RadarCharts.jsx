@@ -14,6 +14,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+
+// Data
 const chartData = [
   { month: "July", income: 9250 },
   { month: "August", income: 10000 },
@@ -23,6 +25,7 @@ const chartData = [
   { month: "December", income: 9000 },
 ]
 
+// Config
 const chartConfig = {
     income: {
       label: "Tot. Inc.",

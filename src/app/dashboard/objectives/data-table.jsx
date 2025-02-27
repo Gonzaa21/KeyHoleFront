@@ -37,6 +37,7 @@ export function DataTable({ columns, data }) {
     columnSizing,
     onColumnSizingChange: setColumnSizing,
     columnResizeMode: "onChange",
+
     state: {
       columnFilters,
       rowSelection
@@ -45,7 +46,8 @@ export function DataTable({ columns, data }) {
 
   return (
     <>
-    <div className="">
+    {/* Title and description */}
+    <div>
       <h3 className="scroll-m-20 text-2xl font-bold tracking-tight">
         🎯 I Objectives
       </h3>
@@ -54,6 +56,7 @@ export function DataTable({ columns, data }) {
       </code>
     </div>
     
+    {/* Filter input */}
     <div>
       <div className="flex items-center py-4">
         <Input
@@ -66,6 +69,7 @@ export function DataTable({ columns, data }) {
         />
       </div>
       
+      {/* Table content */}
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -106,6 +110,7 @@ export function DataTable({ columns, data }) {
         </Table>
       </div>
       
+      {/* Select page */}
       <div className="flex items-center flex-row-reverse space-x-2 py-4">
         <Button
           variant="outline"
@@ -124,6 +129,7 @@ export function DataTable({ columns, data }) {
           Next
         </Button>
 
+        {/* Rows selected */}
         <div className="flex-1 text-sm text-muted-foreground">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
