@@ -19,7 +19,7 @@ import {
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import TableForm from './form/TableForm'
+import TableForm from "./Form/TableForm"
 
 export function DataTable({ columns, data }) {
   const [columnFilters, setColumnFilters] = React.useState([])
