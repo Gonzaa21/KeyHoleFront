@@ -19,7 +19,7 @@ function Income() {
         setJsonData(jsonData);
         console.log("Datos en JSON:", jsonData);
 
-        fetch("http://localhost:5000/dashboard/income", {
+        fetch("key-hole-back.vercel.app/dashboard/income", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: jsonData,

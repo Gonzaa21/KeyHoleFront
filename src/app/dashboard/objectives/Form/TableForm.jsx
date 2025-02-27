@@ -14,7 +14,7 @@ export default function TableForm() {
     setJsonData(jsonData);
     console.log("Datos en JSON:", jsonData);
 
-      fetch("http://127.0.0.1:5000/dashboard/objectives", {
+      fetch("key-hole-back.vercel.app/dashboard/objectives", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: jsonData,
