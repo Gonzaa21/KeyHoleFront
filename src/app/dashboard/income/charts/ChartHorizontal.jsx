@@ -18,18 +18,18 @@ import {
 
 // Data
 const chartData = [
-  { date: "2024-01", income: 5000 },
-  { date: "2024-02", income: 5500 },
-  { date: "2024-03", income: 6000 },
-  { date: "2024-04", income: 7000 },
-  { date: "2024-05", income: 7500 },
-  { date: "2024-06", income: 8500 },
-  { date: "2024-07", income: 8750 },
-  { date: "2024-08", income: 9250 },
-  { date: "2024-09", income: 10000 },
-  { date: "2024-10", income: 10100 },
-  { date: "2024-11", income: 10500 },
-  { date: "2024-12", income: 11000 },
+  { date: "2024-01", income: 5000, profit: 10 },
+  { date: "2024-02", income: 5500, profit: 6 },
+  { date: "2024-03", income: 6000, profit: 5 },
+  { date: "2024-04", income: 7000, profit: 0 },
+  { date: "2024-05", income: 7500, profit: 1 },
+  { date: "2024-06", income: 8500, profit: 3 },
+  { date: "2024-07", income: 8750, profit: 2.4 },
+  { date: "2024-08", income: 9250, profit: 8.1 },
+  { date: "2024-09", income: 10000, profit: 3.3 },
+  { date: "2024-10", income: 10100, profit: 1 },
+  { date: "2024-11", income: 10500, profit: 2 },
+  { date: "2024-12", income: 11000, profit: 5.6 },
 ]
 
 // Config

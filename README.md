@@ -1,11 +1,3 @@
-# TAREAS
-
-`COMENTAR/EXPLICAR/DOCUMENTAR TODO EL CODIGO`
-
-`RESOLVER ULTIMOS ERRORES`
-
-`HACER REQUIREMENTS.TXT`
-
 # Project Overview
 A web application designed to help users efficiently manage their expenses and budgets. With an intuitive user interface and modern design, users can easily track their financial activities, categorize expenses, and gain insights into their spending habits.
 
